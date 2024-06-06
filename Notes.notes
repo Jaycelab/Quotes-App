@@ -1,0 +1,2 @@
+- npm create vite@latest quotes-app -- --template react //shortcut to install vite and create a new project with react template 
+- rafce //shortcut to create a react arrow function component 
