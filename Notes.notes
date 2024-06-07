@@ -1,2 +1,17 @@
 - npm create vite@latest quotes-app -- --template react //shortcut to install vite and create a new project with react template 
 - rafce //shortcut to create a react arrow function component 
+- reducing HTML font-size to 65.50% to make it easier to work with rem units. This allows for 1rem to be equal to 10px.
+- vmin and vmax units are used to set the font size to the smallest or largest value of the height and width of the viewport. Relative unit express that the font size is relative to the viewport size. An example can be a rectanlge with a width of 1000px and a height of 500px. If the width is 1000px and the height is 500px, the font size will be 10px. If the width is 500px and the height is 1000px, the font size will be 5px.   THe vmin and vmax is determined by the smallest or largest value of the viewport.
+- aspect-ratio -  3 / 2; //sets the aspect ratio of the element. The first value is the width and the second value is the height. In this case, the width is 3x it's height resulting in a wider shape
+
+- Common Centering Techniques: 
+    - margin: 0 auto; //centers the element horizontally
+    - display: flex; justify-content: center; align-items: center; //centers the element both horizontally and vertically
+    - position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); //centers the element both horizontally and vertically
+
+- Clamp Property:  accepts (min, val, max) 
+- Sets the value of the property to a value that falls within the range of min and max. If the value is less than min, it will be set to min. 
+- If the value is greater than max, it will be set to max. 
+- If the value is between min and max, it will be set to the value. 
+- An example can be clamp(1rem, 2vw, 2rem) where the value will be set to 1rem if it is less than 1rem, 2vw if it is between 1rem and 2vw, and 2rem if it is greater than 2rem.
+- CQI or CSS container queries are a new feature that allows you to apply styles to an element based on the size of its container. Similar to media queries, but instead of applying styles based on the viewport size, it applies styles based on the container size.

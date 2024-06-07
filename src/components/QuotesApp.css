@@ -1,0 +1,205 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to right, #972727, #1a1212);
+  display: grid;
+  place-items: center;
+}
+
+.quotes-app {
+  width: 90vmin;
+  aspect-ratio: 3 / 2;
+  background-color: #000000;
+  border-radius: 3rem;
+  padding: 4rem;
+  box-shadow: -2rem 2rem 6rem rgba(0, 0, 0, 0.7);
+  position: relative;
+  overflow: hidden;
+}
+
+.app-heading {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 5rem;
+  color: #ddd !important;
+}
+
+/*heart icon*/
+.fav-icon {
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  font-size: 4rem;
+  color: #ddd !important;
+  background-image: linear-gradient(to left, #f36b72, #38191a);
+  /*clips background to only show linera gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+  text-shadow: -0.15rem 0.2rem 2rem rgba(255, 170, 170, 0.3);
+}
+
+.fav-icon:active {
+  transform: translate(0.1rem, 0.1rem);
+}
+
+.quote {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*targetting quote inside quote container*/
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.2rem;
+}
+
+.quote i {
+  font-size: 3rem;
+  color: #ddd;
+}
+
+.quote-text {
+  font-family: "Bad Script", sans-serif;
+  font-size: clamp(1.7rem, 1cqi, 2.5rem);
+  color: #ddd !important;
+  text-align: center;
+  line-height: 3rem;
+  letter-spacing: 0.1rem;
+  width: clamp(25rem, 35cqi, 50rem);
+}
+
+.quote-author {
+  font-family: "Briem Hand", cursive;
+  font-size: 1.6rem;
+  color: #888;
+  text-align: right;
+}
+
+.right-quote {
+  text-align: right;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  column-gap: 2rem;
+}
+
+.btn {
+  width: 18rem;
+  height: 4rem;
+  border-radius: 2rem;
+  border: none;
+  font-size: 1.2rem;
+  font-family: "Comfortaa", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  color: #ddd !important;
+  box-shadow: 3rem 1rem 5rem rgba(245, 242, 242, 0.15);
+  text-shadow: -0.3rem 0.5rem 1rem rgba(245, 242, 242, 0.3);
+  transition: width 2s;
+}
+
+.btn:active {
+  transform: translateY(0.2rem);
+}
+
+.btn-new {
+  background-image: linear-gradient(to left, #f36b72, #38191a);
+}
+
+.btn-fav {
+  background-image: linear-gradient(to right, #7c383a, #6d2d30);
+}
+
+.circles div {
+  position: absolute;
+  border-radius: 50%;
+  aspect-ratio: 1; /* 1:1 equal size */
+}
+
+.circle-1 {
+  width: clamp(5rem, 10cqi, 16rem);
+  background-image: linear-gradient(to top, #4d101a, #f1ffdf);
+  top: -6cqi;
+  left: 50%;
+}
+
+.circle-2 {
+  width: clamp(2rem, 4cqi, 6rem);
+  background-image: linear-gradient(to top, #790000, #f4f5f4);
+  bottom: 12rem;
+  left: 2rem;
+}
+
+.circle-3 {
+  width: clamp(5rem, 10cqi, 16rem);
+  background-image: linear-gradient(to right, #d4cdcd, #0a0a0a00);
+  top: 50%;
+  right: -7cqi;
+}
+
+.circle-4 {
+  width: clamp(1rem, 0.5cqi, 2rem);
+  background-image: linear-gradient(to left, #fd7c7c, #44000b);
+  top: 36%;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .quotes-app {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .app-heading {
+    font-size: 2rem;
+  }
+
+  .fav-icon {
+    top: 2rem;
+    right: 2rem;
+    font-size: 3rem;
+  }
+
+  .quote {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+
+  .quote i {
+    font-size: 0.5rem;
+  }
+
+  .quote-text {
+    line-height: 1;
+    font-size: 1.5rem;
+    width: 100%;
+  }
+
+  .quote-author {
+    font-size: 1.2rem;
+  }
+
+  .buttons {
+    bottom: 2rem;
+  }
+
+  .btn {
+    width: 100%;
+    height: 3rem;
+    font-size: 1rem;
+  }
+
+  .circles div {
+    display: none;
+  }
+}
