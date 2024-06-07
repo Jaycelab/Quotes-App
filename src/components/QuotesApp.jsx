@@ -1,4 +1,23 @@
+import { useState } from "react";
+
 const QuotesApp = () => {
+  //fetching the quotes from json
+  const [quote, setQuote] = useState({
+    text: "Success is peace of mind, which is a direct result of self-satisfaction in knowing you made the effort to become the best of which you are capable.",
+    author: "John Wooden",
+  });
+
+  // Fetch New Quote. REVIEW***********
+  const fetchNewQuote = async () => {
+    const response = await fetch("/quotes.json");
+    const data = await response.json();
+    setQuote({
+      text: data.content,
+      author: data.author,
+    });
+  };
+
+  // Quote Text and Author
   return (
     <div className="container">
       <div className="quotes-app">
