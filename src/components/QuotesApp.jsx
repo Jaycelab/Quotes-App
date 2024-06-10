@@ -1,23 +1,23 @@
 import { useState } from "react";
 
 const QuotesApp = () => {
-  //fetching the quotes from json
-  const [quote, setQuote] = useState({
-    text: "Success is peace of mind, which is a direct result of self-satisfaction in knowing you made the effort to become the best of which you are capable.",
+  const [quote, setQuotes] = useState({
+    text: "Success is peace of mind, which is a direct result of self-satisfaction in knowing you made the effort to become the best of which you are capable",
     author: "John Wooden",
   });
 
-  // Fetch New Quote. REVIEW***********
+  //api call to get quotes from the server (TEMPORARY)
   const fetchNewQuote = async () => {
-    const response = await fetch("/quotes.json");
+    const url = "https://api.quotable.io/random";
+    const response = await fetch(url);
+    //converting to json
     const data = await response.json();
-    setQuote({
+    //setting the new quote
+    setQuotes({
       text: data.content,
       author: data.author,
     });
   };
-
-  // Quote Text and Author
   return (
     <div className="container">
       <div className="quotes-app">
@@ -26,12 +26,8 @@ const QuotesApp = () => {
 
         <div className="quote">
           <i className="bx bxs-quote-alt-left left-quote"></i>
-          <p className="quote-text">
-            Success is peace of mind, which is a direct result of
-            self-satisfaction in knowing you made the effort to become the best
-            of which you are capable.
-          </p>
-          <p className="quote-author">John Wooden</p>
+          <p className="quote-text">{quote.text}</p>
+          <p className="quote-author">{quote.author}</p>
           <i className="bx bxs-quote-alt-right right-quote"></i>
         </div>
 
@@ -43,7 +39,9 @@ const QuotesApp = () => {
         </div>
 
         <div className="buttons">
-          <button className="btn btn-new">New Quote</button>
+          <button className="btn btn-new" onClick={fetchNewQuote}>
+            New Quote
+          </button>
           <button className="btn btn-fav">Add Favorite</button>
         </div>
       </div>

@@ -1,3 +1,7 @@
+*TDL*
+- upload json data to mongodb
+
+*Notes*
 - npm create vite@latest quotes-app -- --template react //shortcut to install vite and create a new project with react template 
 - rafce //shortcut to create a react arrow function component 
 - reducing HTML font-size to 65.50% to make it easier to work with rem units. This allows for 1rem to be equal to 10px.
@@ -15,3 +19,5 @@
 - If the value is between min and max, it will be set to the value. 
 - An example can be clamp(1rem, 2vw, 2rem) where the value will be set to 1rem if it is less than 1rem, 2vw if it is between 1rem and 2vw, and 2rem if it is greater than 2rem.
 - CQI or CSS container queries are a new feature that allows you to apply styles to an element based on the size of its container. Similar to media queries, but instead of applying styles based on the viewport size, it applies styles based on the container size.
+
+- React state is a container for storing property values that belong to a component. When the state object changes, the component re-renders.
