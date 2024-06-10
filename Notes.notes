@@ -23,3 +23,8 @@
 - React state is a container for storing property values that belong to a component. When the state object changes, the component re-renders.
 
 - Inset property is a shorthand property that sets the top, right, bottom, and left properties of an element. It is used to create a shadow effect on the element. The first value is the horizontal offset, the second value is the vertical offset, the third value is the blur radius, and the fourth value is the spread radius. The horizontal and vertical offset determines the position of the shadow. The blur radius determines the size of the shadow. The spread radius determines the size of the shadow. The inset property is used to create an inner shadow effect on the element.
+
+- Delete function alternative: (Double check effieciency)***
+const updatedFavorites = favorites.filter( 
+    (
+        item, i) => i == index );
