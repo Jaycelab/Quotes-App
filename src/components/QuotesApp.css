@@ -150,60 +150,6 @@
   background-image: linear-gradient(to left, #fd7c7c, #44000b);
   top: 36%;
 }
-@media (max-width: 600px) {
-  .container {
-    padding: 2rem;
-  }
-
-  .quotes-app {
-    width: 90%;
-    padding: 2rem;
-  }
-
-  .app-heading {
-    font-size: 2rem;
-  }
-
-  .fav-icon {
-    top: 2rem;
-    right: 2rem;
-    font-size: 3rem;
-  }
-
-  .quote {
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -40%);
-  }
-
-  .quote i {
-    font-size: 0.5rem;
-  }
-
-  .quote-text {
-    line-height: 1;
-    font-size: 1.5rem;
-    width: 100%;
-  }
-
-  .quote-author {
-    font-size: 1.2rem;
-  }
-
-  .buttons {
-    bottom: 2rem;
-  }
-
-  .btn {
-    width: 100%;
-    height: 3rem;
-    font-size: 1rem;
-  }
-
-  .circles div {
-    display: none;
-  }
-}
 
 .favorites {
   width: 100%;
@@ -212,6 +158,24 @@
   inset: 0;
   background-image: linear-gradient(to left, #201515, #220000);
   padding: 3em 7rem 3rem 3rem;
+  overflow-y: auto;
+}
+
+.favorites::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+.favorites::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.favorites::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.favorites::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 0.4rem;
 }
 
 .fav-quote {
@@ -249,4 +213,23 @@
   font-family: "Briem Hand", cursive;
   text-align: right;
   color: #ddd;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 850px) {
+  .quotes-app {
+    width: 75vmin;
+    aspect-ratio: 2 / 3;
+  }
+}
+
+@media (max-width: 550px) {
+  .quotes-app {
+    aspect-ratio: 1 / 2;
+  }
+
+  .buttons {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
 }
