@@ -6,6 +6,9 @@ const QuotesApp = () => {
     author: "John Wooden",
   });
 
+  //opening and closing the favorites section
+  const [showFavorites, setShowFavorites] = useState(false);
+
   //api call to get quotes from the server (TEMPORARY)
   const fetchNewQuote = async () => {
     const url = "https://api.quotable.io/random";
@@ -43,6 +46,26 @@ const QuotesApp = () => {
             New Quote
           </button>
           <button className="btn btn-fav">Add Favorite</button>
+        </div>
+
+        <div className="favorites">
+          <button className="btn-close">
+            <i className="bx bx-x"></i>
+          </button>
+          <div className="fav-quote">
+            <div className="fav-quote-delete">
+              <i className="bx bx-x-circle"></i>
+            </div>
+            <div className="fav-quote-content">
+              <div className="fav-quote-text">
+                "Success is peace of mind, which is a direct result of
+                self-satisfaction in knowing you made the effort to become the
+                best of which you are capable"
+              </div>
+
+              <div className="fav-quote-author">"John Wooden"</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -21,3 +21,5 @@
 - CQI or CSS container queries are a new feature that allows you to apply styles to an element based on the size of its container. Similar to media queries, but instead of applying styles based on the viewport size, it applies styles based on the container size.
 
 - React state is a container for storing property values that belong to a component. When the state object changes, the component re-renders.
+
+- Inset property is a shorthand property that sets the top, right, bottom, and left properties of an element. It is used to create a shadow effect on the element. The first value is the horizontal offset, the second value is the vertical offset, the third value is the blur radius, and the fourth value is the spread radius. The horizontal and vertical offset determines the position of the shadow. The blur radius determines the size of the shadow. The spread radius determines the size of the shadow. The inset property is used to create an inner shadow effect on the element.
