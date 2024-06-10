@@ -36,6 +36,7 @@
   -webkit-text-fill-color: transparent;
   cursor: pointer;
   text-shadow: -0.15rem 0.2rem 2rem rgba(255, 170, 170, 0.3);
+  background-clip: text;
 }
 
 .fav-icon:active {
