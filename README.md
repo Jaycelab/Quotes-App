@@ -1,3 +1,7 @@
-# Preview
+# Tasks:
 
-![Preview Image](https://github.com/Jaycelab/Quotes-App/blob/main/src/images/preview2.png)
+- Finish updating json file
+- Fetch json data from either local storage or uploading to database
+- Work more on color contrast and styling
+- Implement animation when toggling to favorites
+- Make favorites logo more noticable
