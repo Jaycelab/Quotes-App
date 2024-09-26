@@ -1,6 +1,6 @@
 {
-  "homepage": "https://jaycelab.github.io/Quotes-Generator",
-  "name": "quotes-generator",
+  "homepage": "https://github.com/Jaycelab/Quotes-Generator",
+  "name": "Quotes-Generator",
   "private": true,
   "version": "0.0.0",
   "type": "module",
